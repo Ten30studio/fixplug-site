@@ -807,6 +807,195 @@
     .agent-card:nth-child(3) .pulse-dot { animation-delay: 0.9s; }
     .agent-card:nth-child(4) .pulse-dot { animation-delay: 1.35s; }
 
+    /* ===== SKILL VERIFICATION SECTION ===== */
+    #verification {
+      background: #111111;
+    }
+
+    .verify-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 700px) {
+      .verify-grid { grid-template-columns: 1fr; }
+    }
+
+    .verify-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .verify-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--amber);
+      box-shadow: 0 8px 32px rgba(200,133,58,0.18);
+    }
+
+    .verify-card--badge {
+      border-color: rgba(34,197,94,0.25);
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.1), 0 4px 24px rgba(34,197,94,0.08);
+    }
+
+    .verify-card--badge:hover {
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.4), 0 8px 40px rgba(34,197,94,0.2);
+      border-color: rgba(34,197,94,0.6);
+    }
+
+    .verify-icon {
+      font-size: 1.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .verify-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .verify-desc {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .verify-footer {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .verify-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ===== TEN30 ACADEMY SECTION ===== */
+    #academy {
+      background: #0D1F17;
+    }
+
+    .academy-badge {
+      display: inline-block;
+      padding: 0.28rem 0.85rem;
+      border: 1px solid rgba(200,133,58,0.35);
+      border-radius: 100px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--amber);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      background: rgba(200,133,58,0.08);
+    }
+
+    .academy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .academy-grid { grid-template-columns: 1fr; }
+    }
+
+    .academy-col {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(200,133,58,0.18);
+      border-radius: 14px;
+      padding: 1.6rem 1.5rem;
+    }
+
+    .academy-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--amber);
+      margin-bottom: 1.1rem;
+    }
+
+    .academy-col ul {
+      list-style: none;
+    }
+
+    .academy-col ul li {
+      font-size: 0.86rem;
+      color: var(--muted);
+      padding: 0.32rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .academy-col ul li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      flex-shrink: 0;
+      margin-top: 0.45rem;
+    }
+
+    .pull-quote {
+      margin-top: 2.25rem;
+      border-left: 3px solid var(--amber);
+      padding: 1rem 1.25rem;
+      background: rgba(200,133,58,0.05);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .pull-quote p {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.65;
+    }
+
+    .academy-cta {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    .btn-amber-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--amber);
+      color: #0D0D0D;
+      font-family: var(--font);
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 0.95rem 2.2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.18s, box-shadow 0.18s, transform 0.15s;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .btn-amber-lg:hover {
+      background: var(--amber-glow);
+      box-shadow: 0 6px 30px rgba(200,133,58,0.45);
+      transform: translateY(-2px);
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 480px) {
       .nav-links { display: none; }
@@ -823,6 +1012,8 @@
       <li><a href="#customer">Customers</a></li>
       <li><a href="#provider">Providers</a></li>
       <li><a href="#agentic">Office</a></li>
+      <li><a href="#verification">Verify</a></li>
+      <li><a href="#academy">Academy</a></li>
       <li><a href="#partner">Partners</a></li>
     </ul>
   </nav>
@@ -1100,7 +1291,100 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- SECTION 5: PARTNER / INVESTOR -->
+  <!-- SECTION 5: SKILL VERIFICATION -->
+  <!-- ============================================================ -->
+  <section id="verification">
+    <div class="section-pad">
+      <div class="container">
+        <div class="section-label">Skill Verification</div>
+        <h2 class="section-title">We Verify. So You Don't Have To.</h2>
+        <p class="section-sub">
+          Every FixPlug provider passes our skill verification before they touch a single job.
+        </p>
+
+        <div class="verify-grid">
+
+          <div class="verify-card">
+            <div class="verify-icon">📋</div>
+            <h3 class="verify-title">Aptitude Assessment</h3>
+            <p class="verify-desc">Verbal reasoning + quantitative aptitude. Not a trick — a real measure of problem-solving on the job.</p>
+          </div>
+
+          <div class="verify-card verify-card--trade">
+            <div class="verify-icon">🔧</div>
+            <h3 class="verify-title">Trade Skills Test</h3>
+            <p class="verify-desc">Scenario-based questions specific to your trade. Electrical. Plumbing. HVAC. Solar. Each one written for the real work.</p>
+          </div>
+
+          <div class="verify-card verify-card--badge">
+            <div class="verify-icon">✅</div>
+            <h3 class="verify-title">Verified Badge</h3>
+            <p class="verify-desc">Pass both stages and you earn the FixPlug Verified badge. Customers know. You get priority dispatch.</p>
+          </div>
+
+        </div>
+
+        <div class="verify-footer">
+          <p class="verify-note">Didn't pass? You're not out. You're in the queue for something better.</p>
+          <a href="#academy" class="btn-amber">Ten30 Academy →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 6: TEN30 ACADEMY -->
+  <!-- ============================================================ -->
+  <section id="academy">
+    <div class="section-pad">
+      <div class="container">
+
+        <div class="academy-badge">Powered by Ten30 Studios</div>
+        <div class="section-label">Ten30 Academy</div>
+        <h2 class="section-title">Ten30 Academy</h2>
+        <p class="section-sub">
+          The training arm of the FixPlug network. Upskill, re-certify, and come back stronger.
+        </p>
+
+        <div class="academy-grid">
+
+          <div class="academy-col">
+            <h4>For Providers</h4>
+            <ul>
+              <li>Short courses by trade (Electrical, Plumbing, HVAC, Solar, Generator)</li>
+              <li>Assessment prep: know what to expect before you test</li>
+              <li>Physical and digital delivery</li>
+              <li>Certificate on completion</li>
+            </ul>
+          </div>
+
+          <div class="academy-col">
+            <h4>For Businesses</h4>
+            <ul>
+              <li>Staff upskilling programmes</li>
+              <li>Trade certification compliance</li>
+              <li>Custom training for your team</li>
+              <li>FixPlug-verified output</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="pull-quote">
+          <p>"Anyone can claim a skill. FixPlug proves it — and builds it."</p>
+        </div>
+
+        <div class="academy-cta">
+          <a href="#" class="btn-amber-lg">Join the Waitlist</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 7: PARTNER / INVESTOR -->
   <!-- ============================================================ -->
   <section id="partner">
     <div class="section-pad">
